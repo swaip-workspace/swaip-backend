@@ -1,7 +1,7 @@
 <template>
   <div>
     <button v-on:click="getSites">Sites</button>
-    <button v-on:click="createNewSpace">Create New Space</button>
+    <button v-on:click="createNewSpace('toshiba6')">Create New Space</button>
     <span v-html="message"></span>
   </div>
 </template>
@@ -32,7 +32,10 @@ export default{
     //  console.log(this.client.createSite)
       const result = await this.client.createSite({
         body: {
-          name: `swaip-space-${name}`
+          name: `swaip-space-${name}`,
+          repo:{
+            repo_path:'swaip-backend'
+          }
         }
       })
       console.log("result", result)
