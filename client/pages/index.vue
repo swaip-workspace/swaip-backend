@@ -32,7 +32,7 @@ export default{
     //  console.log(this.client.createSite)
       const result = await this.client.createSite({
         body: {
-          name: 'swaip2'
+          name: `swaip-space-${name}`
         }
       })
       console.log("result", result)
