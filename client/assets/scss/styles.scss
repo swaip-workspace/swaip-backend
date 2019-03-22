@@ -1,0 +1,50 @@
+@import 'bootstrap/dist/css/bootstrap.css';
+@import 'bootstrap-vue/dist/bootstrap-vue.css';
+@import './_variables.scss';
+
+
+body {
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  font-display: auto;
+  line-height: 1;
+  font-size: 18px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+  background:white;
+}
+
+.layout-enter-active, .layout-leave-to {
+  transition: all .2s ease-out;
+}
+.layout-enter, .layout-leave-to {
+  opacity: 0;
+  transform-origin: 50% 50%;
+}
+
+.page-enter-active, .page-leave-active {
+  transition: all .2s ease-out;
+}
+.page-enter, .page-leave-active {
+  opacity: 0;
+  transform-origin: 50% 50%;
+}
+
+
+a.nuxt-link-exact-active,
+a.nuxt-link-active{
+  pointer-events: none;
+}
+
+a{
+  color:inherit;
+
+  &:hover{
+    color:inherit;
+  }
+}
+
+ul{
+  padding:0;
+  margin:0;
+}
