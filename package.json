@@ -31,7 +31,8 @@
     "netlify-auth-providers": "^1.0.0-alpha5",
     "netlify-lambda": "^1.4.3",
     "node-sass": "^4.11.0",
-    "nuxt": "^2.4.0"
+    "nuxt": "^2.4.0",
+    "vue-material": "^1.0.0-beta-10.2"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^0.0.1",

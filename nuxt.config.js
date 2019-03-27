@@ -26,7 +26,7 @@ module.exports = {
     link: [
       {
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,600'
+        href: '//fonts.googleapis.com/css?family=Roboto:400,500,700,400italic|Material+Icons'
       }
     ]
   },
@@ -59,7 +59,9 @@ module.exports = {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    { src:'~/plugins/netlify', ssr:false }
+    { src:'~/plugins/global' },
+    { src:'~/plugins/netlify', ssr:false },
+    { src:'~/plugins/material'}
   ],
 
   /*
@@ -67,11 +69,11 @@ module.exports = {
   */
   modules: [
     '@nuxtjs/axios',
-    ['@nuxtjs/pwa', {
+    /*['@nuxtjs/pwa', {
       manifest:{
         display:'fullscreen'
       }
-    }]
+    }]*/
   ],
   /*
   ** Axios module configuration

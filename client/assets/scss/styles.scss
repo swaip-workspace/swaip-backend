@@ -12,6 +12,11 @@ body {
   margin: 0;
   padding: 0;
   background:white;
+  height:100%;
+}
+
+#__nuxt, #__layout, .page-container, .md-app{
+  height:100%;
 }
 
 .layout-enter-active, .layout-leave-to {

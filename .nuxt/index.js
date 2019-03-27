@@ -10,8 +10,10 @@ import { setContext, getLocation, getRouteData, normalizeError } from './utils'
 
 /* Plugins */
 
-import nuxt_plugin_axios_ed2a0f76 from 'nuxt_plugin_axios_ed2a0f76' // Source: ./axios.js (mode: 'all')
+import nuxt_plugin_axios_c14c8c9e from 'nuxt_plugin_axios_c14c8c9e' // Source: ./axios.js (mode: 'all')
+import nuxt_plugin_global_6441a2ce from 'nuxt_plugin_global_6441a2ce' // Source: ..\\client\\plugins\\global (mode: 'all')
 import nuxt_plugin_netlify_54ab75f7 from 'nuxt_plugin_netlify_54ab75f7' // Source: ..\\client\\plugins\\netlify (mode: 'client')
+import nuxt_plugin_material_04eaaa9d from 'nuxt_plugin_material_04eaaa9d' // Source: ..\\client\\plugins\\material (mode: 'all')
 
 // Component: <NoSsr>
 Vue.component(NoSsr.name, NoSsr)
@@ -129,7 +131,9 @@ async function createApp(ssrContext) {
 
   // Plugin execution
 
-  if (typeof nuxt_plugin_axios_ed2a0f76 === 'function') await nuxt_plugin_axios_ed2a0f76(app.context, inject)
+  if (typeof nuxt_plugin_axios_c14c8c9e === 'function') await nuxt_plugin_axios_c14c8c9e(app.context, inject)
+  if (typeof nuxt_plugin_global_6441a2ce === 'function') await nuxt_plugin_global_6441a2ce(app.context, inject)
+  if (typeof nuxt_plugin_material_04eaaa9d === 'function') await nuxt_plugin_material_04eaaa9d(app.context, inject)
 
   if (process.client) {
     if (typeof nuxt_plugin_netlify_54ab75f7 === 'function') await nuxt_plugin_netlify_54ab75f7(app.context, inject)

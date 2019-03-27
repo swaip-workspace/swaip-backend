@@ -1,44 +1,54 @@
 <template>
   <div>
-    <button v-on:click="getSites">Sites</button>
-    <button v-on:click="createNewSpace('toshiba6')">Create New Space</button>
-    <span v-html="message"></span>
+    DASHBOARD
   </div>
 </template>
+
+
 <script>
-import NetlifyAPI from 'netlify';
 
 export default{
 
   data(){
     return {
-      message:'Rien',
-      authenticator:null,
-      client:null
+      message:'Rien'
     }
   },
   mounted(){
-    this.client = new NetlifyAPI('8ea2bf0e91983a012e2e306ac00180c1ecf9687108d7b9c877bc33cd68d1bb78')
-    console.log(this.client)
-
+    console.log(this)
   },
-
   methods:{
-    async getSites(){
-      const sites = await this.client.listSites()
-      console.log(sites);
-    },
     async createNewSpace(name){
-    //  console.log(this.client.createSite)
-      const result = await this.client.createSite({
+      const spaceName = `swaip-space-${name}`;
+
+      console.log(this.$netlifyApi)
+
+      await this.$netlifyApi.deleteAllSpaces();
+
+      const result = await this.$netlifyApi.createSite({
         body: {
-          name: `swaip-space-${name}`,
+          name: spaceName,
           repo:{
-            repo_path:'swaip-backend'
+            /*command = "middleman build"
+            deploy_key_id = "${netlify_deploy_key.key.id}"
+            dir = "/build"*/
+            provider:"github",
+            repo_path:"swaip-workspace/swaip-backend",
+            repo_branch:"master"
           }
         }
       })
-      console.log("result", result)
+      /*const deploy = await this.$netlifyApi.createSiteDeploy({
+        title:'First Deploy',
+        deploy:{
+          files: {"/space.html": "907d14fb3af2b0d4f18c2d46abe8aedce17367bd"},
+          draft: true,
+          async: true,
+          functions: {}
+        },
+        site_id:result.site_id
+      })*/
+
     }
   }
 }
