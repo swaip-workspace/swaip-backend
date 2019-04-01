@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import { interopDefault } from './utils'
 
 const _6f431bc6 = () => interopDefault(import('..\\client\\pages\\customers.vue' /* webpackChunkName: "pages_customers" */))
+const _0cc6d99e = () => interopDefault(import('..\\client\\pages\\login.vue' /* webpackChunkName: "pages_login" */))
 const _7ae5f569 = () => interopDefault(import('..\\client\\pages\\components\\list\\customers.vue' /* webpackChunkName: "pages_components_list_customers" */))
 const _2ff4f01a = () => interopDefault(import('..\\client\\pages\\index.vue' /* webpackChunkName: "pages_index" */))
 
@@ -84,6 +85,10 @@ export function createRouter() {
       path: "/customers",
       component: _6f431bc6,
       name: "customers"
+    }, {
+      path: "/login",
+      component: _0cc6d99e,
+      name: "login"
     }, {
       path: "/components/list/customers",
       component: _7ae5f569,

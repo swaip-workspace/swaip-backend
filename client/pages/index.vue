@@ -1,11 +1,13 @@
 <template>
   <div>
-    DASHBOARD
+     THEBLABLAAAA
   </div>
 </template>
 
 
 <script>
+
+
 
 export default{
 
@@ -15,11 +17,11 @@ export default{
     }
   },
   mounted(){
-    console.log(this)
+
   },
   methods:{
     async createNewSpace(name){
-      const spaceName = `swaip-space-${name}`;
+      /*const spaceName = `swaip-space-${name}`;
 
       console.log(this.$netlifyApi)
 
@@ -29,15 +31,12 @@ export default{
         body: {
           name: spaceName,
           repo:{
-            /*command = "middleman build"
-            deploy_key_id = "${netlify_deploy_key.key.id}"
-            dir = "/build"*/
             provider:"github",
             repo_path:"swaip-workspace/swaip-backend",
             repo_branch:"master"
           }
         }
-      })
+      })*/
       /*const deploy = await this.$netlifyApi.createSiteDeploy({
         title:'First Deploy',
         deploy:{

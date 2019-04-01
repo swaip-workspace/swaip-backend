@@ -4,8 +4,9 @@ import NuxtLoading from './components/nuxt-loading.vue'
 import '..\\client\\assets\\scss\\styles.scss'
 
 import _6f6c098b from '..\\client\\layouts\\default.vue'
+import _ee7125b0 from '..\\client\\layouts\\simple.vue'
 
-const layouts = { "_default": _6f6c098b }
+const layouts = { "_default": _6f6c098b,"_simple": _ee7125b0 }
 
 export default {
   head: {"title":"Swaip","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":"Swaip est une plateforme dédiée à la création et à la diffusion de contenu dynamique."}],"link":[{"rel":"stylesheet","href":"\u002F\u002Ffonts.googleapis.com\u002Fcss?family=Roboto:400,500,700,400italic|Material+Icons"}],"style":[],"script":[]},

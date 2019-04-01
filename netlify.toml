@@ -1,17 +1,6 @@
 [build]
-  #command = "npm run build && npm run copy-redirects"
   publish = "dist"
-  Functions = "lambda" #  netlify-lambda reads this
+  functions = "functions"
 
 [context.production]
   command = "npm run generate"
-
-
-
-
-
-#[[redirects]]
-#  from = "/*"
-#  to = "/index.html"
-#  status = 200
-#  force = true

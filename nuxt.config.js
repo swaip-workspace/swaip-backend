@@ -46,6 +46,8 @@ module.exports = {
   /* Middleware */
   router: {
 
+    middleware: ['netlify'],
+
     base: '',
 
     /*extendRoutes (routes) {
@@ -60,8 +62,9 @@ module.exports = {
   */
   plugins: [
     { src:'~/plugins/global' },
-    { src:'~/plugins/netlify', ssr:false },
-    { src:'~/plugins/material'}
+    { src:'~/plugins/netlify/api' },
+    { src:'~/plugins/netlify/identity', ssr:false },
+    { src:'~/plugins/material' }
   ],
 
   /*

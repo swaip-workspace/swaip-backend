@@ -12,7 +12,8 @@ import { setContext, getLocation, getRouteData, normalizeError } from './utils'
 
 import nuxt_plugin_axios_c14c8c9e from 'nuxt_plugin_axios_c14c8c9e' // Source: ./axios.js (mode: 'all')
 import nuxt_plugin_global_6441a2ce from 'nuxt_plugin_global_6441a2ce' // Source: ..\\client\\plugins\\global (mode: 'all')
-import nuxt_plugin_netlify_54ab75f7 from 'nuxt_plugin_netlify_54ab75f7' // Source: ..\\client\\plugins\\netlify (mode: 'client')
+import nuxt_plugin_api_f4cf0bfc from 'nuxt_plugin_api_f4cf0bfc' // Source: ..\\client\\plugins\\netlify\\api (mode: 'all')
+import nuxt_plugin_identity_2fbd21d6 from 'nuxt_plugin_identity_2fbd21d6' // Source: ..\\client\\plugins\\netlify\\identity (mode: 'client')
 import nuxt_plugin_material_04eaaa9d from 'nuxt_plugin_material_04eaaa9d' // Source: ..\\client\\plugins\\material (mode: 'all')
 
 // Component: <NoSsr>
@@ -133,10 +134,11 @@ async function createApp(ssrContext) {
 
   if (typeof nuxt_plugin_axios_c14c8c9e === 'function') await nuxt_plugin_axios_c14c8c9e(app.context, inject)
   if (typeof nuxt_plugin_global_6441a2ce === 'function') await nuxt_plugin_global_6441a2ce(app.context, inject)
+  if (typeof nuxt_plugin_api_f4cf0bfc === 'function') await nuxt_plugin_api_f4cf0bfc(app.context, inject)
   if (typeof nuxt_plugin_material_04eaaa9d === 'function') await nuxt_plugin_material_04eaaa9d(app.context, inject)
 
   if (process.client) {
-    if (typeof nuxt_plugin_netlify_54ab75f7 === 'function') await nuxt_plugin_netlify_54ab75f7(app.context, inject)
+    if (typeof nuxt_plugin_identity_2fbd21d6 === 'function') await nuxt_plugin_identity_2fbd21d6(app.context, inject)
   }
 
   // If server-side, wait for async component to be resolved first
